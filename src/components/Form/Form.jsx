@@ -8,7 +8,7 @@ class Form extends Component {
   state = { name: '', number: '' };
 
   nameInputId = nanoid();
-  numberInputid = nanoid();
+  numberInputId = nanoid();
 
   hendleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -25,6 +25,7 @@ class Form extends Component {
   resetForm = () => {
     this.setState({ name: '', number: '' });
   };
+
   render() {
     return (
       <form onSubmit={this.hendleSubmit} className={s.form}>
