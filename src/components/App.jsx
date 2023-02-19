@@ -51,6 +51,12 @@ class App extends Component {
     );
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.phoneList !== prevState.phoneList) {
+      localStorage.setitem(`phoneList`, JSON.stringify(this.state.phoneList));
+    }
+  }
+
   render() {
     const { filter } = this.state;
 
